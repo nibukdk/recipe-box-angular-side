@@ -1,0 +1,22 @@
+<form (submit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Recipe Name</label>
+    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name">
+  </div>
+
+  <div class="form-group">
+    <label for="image">Enter source for image</label>
+    <input type="text"  class="form-control" id="image" rows="3" name="image" [(ngModel)]="image">
+  </div>
+
+  <div class="form-group">
+      <label for="Description">Description</label>
+      <textarea class="form-control" id="Description" name="description" [(ngModel)]="description"></textarea>
+  </div>
+ 
+  <div class="form-group">
+      <label for="ingredients">ingredients</label>
+      <textarea class="form-control" id="ingredients" name="ingredients" [(ngModel)]="ingredients" placeholder="Separate Ingredients by comma"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
