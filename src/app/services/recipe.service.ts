@@ -9,10 +9,10 @@ export class RecipeService {
 
   constructor(private http:HttpClient) { }
   getRecipes() {
-    return this.http.get(`${this.uri}/home`);
+    return this.http.get(`${this.uri}`);
   }
   getRecipeById(id) {
-    return this.http.get(`${this.uri}/home/${id}/details`);
+    return this.http.get(`${this.uri}/home/${id}/details/update`);
   }
 
   addNewRecipe(name,image, ingredients, description) {
@@ -33,7 +33,7 @@ export class RecipeService {
       image: image
       
     };
-    return this.http.put(`${this.uri}/home/${id}/details`, updatedRecipe);
+    return this.http.put(`${this.uri}/home/${id}/details/update`, updatedRecipe);
   }
 
   deleteRecipe(id) {

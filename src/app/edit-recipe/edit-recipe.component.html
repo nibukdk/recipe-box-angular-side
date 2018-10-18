@@ -1,3 +1,23 @@
-<p>
-  edit-recipe works!
-</p>
+<form (submit)="onUpdateRecipe(id,name, image, ingredients,description)">
+    <div class="form-group">
+      <label for="name">Recipe Name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" value="{{name}}">
+    </div>
+  
+    <div class="form-group">
+      <label for="image">Enter source for image</label>
+      <input type="text"  class="form-control" id="image" rows="3" name="image" [(ngModel)]="image" value="{{image}}">
+    </div>
+  
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea class="form-control" id="Description" name="description" [(ngModel)]="description" value="{{description}}"></textarea>
+    </div>
+   
+    <div class="form-group">
+        <label for="ingredients">Ingredients</label>
+        <textarea class="form-control" id="ingredients" name="ingredients" [(ngModel)]="ingredients" placeholder="Separate Ingredients by comma" value="{{ingredients}}"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-info" [routerLink]="[ '/home']">Back</button>
+  </form>

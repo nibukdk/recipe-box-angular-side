@@ -1,3 +1,22 @@
-<p>
-  list-recipe works!
-</p>
+<div *ngFor="let item of recipes">
+  <div class="card bg-light w-80">
+    <img class="card-img-top img-fluid" src="{{item.image}}" alt="{{item.name}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <br>
+      <h6 class="card-subtitle">Ingredients</h6>
+
+      <p class="card-text">
+
+        {{item.ingredients}}
+      </p>
+      <br>
+      <h6 class="card-subtitle">Method</h6>
+      <p class="card-text">
+        {{item.description}}
+      </p>
+      <a class="btn btn-primary" (click)="updateRecipe(item._id)">Edit</a>
+      <a class="btn btn-danger" (click)="deleteRecipe(item._id)">Delete</a>
+    </div>
+  </div>
+</div>

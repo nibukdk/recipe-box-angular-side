@@ -1,4 +1,4 @@
-<form (submit)="onSubmit()">
+<form (submit)="onAddRecipe(name, image, ingredients,description)">
   <div class="form-group">
     <label for="name">Recipe Name</label>
     <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name">
@@ -15,8 +15,9 @@
   </div>
  
   <div class="form-group">
-      <label for="ingredients">ingredients</label>
+      <label for="ingredients">Ingredients</label>
       <textarea class="form-control" id="ingredients" name="ingredients" [(ngModel)]="ingredients" placeholder="Separate Ingredients by comma"></textarea>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-info" [routerLink]="[ '/home']">Back</button>
 </form>
