@@ -1,5 +1,5 @@
 <div *ngFor="let item of recipes">
-  <div class="card bg-light w-80">
+  <div class="card bg-light border-dark text-center w-80">
     <img class="card-img-top img-fluid" src="{{item.image}}" alt="{{item.name}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{item.name}}</h5>
@@ -15,8 +15,8 @@
       <p class="card-text">
         {{item.description}}
       </p>
-      <a class="btn btn-primary" (click)="updateRecipe(item._id)">Edit</a>
-      <a class="btn btn-danger" (click)="deleteRecipe(item._id)">Delete</a>
+      <a class="btn btn-primary btn-lg text-white" (click)="updateRecipe(item._id)">Edit</a>
+      <a class="btn btn-danger btn-lg text-white" (click)="deleteRecipe(item._id)">Delete</a>
     </div>
   </div>
 </div>
